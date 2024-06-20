@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Journey</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <div class="header">
+      <h1>Dein Blog über Geräteturnen</h1>
+      <div class="login-link">
+        <span id="user-status">
+          <a href="../login.html" class="button" id="login-button">Anmelden</a>
+        </span>
+      </div>
+    </div>
+
+    <div class="toggle-sidebar">☰ Menü</div>
+    <div class="content">
+      <div class="sidebar">
+        <h3>Disziplinen</h3>
+        <a href="../index.html">Startseite</a>
+        <a href="../Disziplinen/Barren.html">Barren</a>
+        <a href="../Disziplinen/Boden.html">Boden</a>
+        <a href="../Disziplinen/Reck.html">Reck</a>
+        <a href="../Disziplinen/Ringe.html">Ringe</a>
+        <a href="../Disziplinen/Sprung.html">Sprung</a>
+        <h3>Blog</h3>
+        <a href="YourJourney.html">Your Journey</a>
+        <a href="Was-ist-Geräteturnen.html">Was ist Geräteturnen?</a>
+      </div>
+
+      <div class="main-content">
+        <div class="center-content">
+          <h2>Erzähle deine Geschichte!</h2>
+          <div id="blog-form-container" style="display: none">
+            <form id="blogForm" class="form-container">
+              <div class="form-group">
+                <label for="content">Inhalt:</label>
+                <textarea id="content" name="content" rows="10" required></textarea>
+              </div>
+              <button type="submit" class="button">Posten</button>
+              <div class="message" id="message"></div>
+            </form>
+          </div>
+          <h2>Blogeinträge</h2>
+          <div id="blogs" class="blog-container"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>&copy; 2024 Geräteturnen Informationen</p>
+    </div>
+
+    <script src="../js/scripts.js"></script>
+  </body>
+</html>
