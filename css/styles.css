@@ -1,0 +1,262 @@
+:root {
+    --dark-bg: #333D29;
+    --medium-bg: #414833;
+    --light-bg: #C2C5AA;
+    --text-color: #F0F0F0;
+    --highlight-color: #936639;
+    --link-color: whitesmoke;
+}
+
+body {
+    font-family: Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--light-bg);
+    color: var(--dark-bg);
+}
+
+.header {
+    background-color: var(--dark-bg);
+    color: var(--text-color);
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+.content {
+    display: flex;
+    flex: 1;
+    padding: 20px;
+    gap: 20px;
+    justify-content: left;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: var(--medium-bg);
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    background-color: var(--text-color);
+    color: var(--dark-bg);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer {
+    background-color: var(--dark-bg);
+    color: var(--text-color);
+    padding: 10px;
+    text-align: center;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+}
+
+.login-link {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.button {
+    background-color: var(--highlight-color);
+    color: var(--text-color);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.button:hover {
+    background-color: #A68A64;
+}
+
+.sidebar a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: var(--text-color);
+    border-radius: 3px;
+    margin-bottom: 5px;
+    background-color: var(--highlight-color);
+}
+
+.sidebar a:hover {
+    background-color: #7F4F24;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.message {
+    margin-top: 15px;
+}
+
+.center-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 500px;
+    padding: 15px;
+    background-color: var(--medium-bg);
+    color: var(--text-color);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: none;
+    overflow-wrap: break-word;
+}
+
+.back-link {
+    margin-top: 15px;
+}
+
+.back-link a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+.back-link a:hover {
+    text-decoration: underline;
+}
+
+h2 {
+    color: var(--dark-bg);
+}
+
+h3 {
+    color: var(--text-color);
+}
+
+ul {
+    padding-left: 20px;
+}
+
+.disciplines {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.discipline {
+    flex: 1 1 calc(33% - 20px);
+    margin: 10px;
+    text-align: center;
+    background-color: var(--medium-bg);
+    border: 1px solid var(--highlight-color);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.blog-item {
+    background-color: var(--medium-bg);
+    color: var(--text-color);
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    overflow-wrap: break-word;
+    width: 100%;
+}
+
+.blog-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.video-container {
+    text-align: left;
+    margin: 20px 0;
+}
+
+@media (max-width: 1200px) {
+    .content {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .sidebar {
+        width: auto;
+        display: none;
+    }
+
+    .sidebar.active {
+        display: block;
+    }
+
+    .header h1 {
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    .button {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+
+    .login-link {
+        position: static;
+        margin-top: 10px;
+    }
+
+    .toggle-sidebar {
+        display: block;
+        background-color: var(--highlight-color);
+        color: var(--text-color);
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-bottom: 10px;
+    }
+}
+
+@media (min-width: 1201px) {
+    .sidebar {
+        display: block !important;
+    }
+
+    .toggle-sidebar {
+        display: none;
+    }
+}
