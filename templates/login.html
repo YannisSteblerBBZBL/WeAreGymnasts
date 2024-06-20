@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="center-content">
+        <div class="form-container">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="username">Benutzername:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Passwort:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="button">Login</button>
+                <div class="message" id="message"></div>
+                <div class="back-link">
+                    <a href="/templates/index.html">Zurück zur Startseite</a>
+                </div>
+                <div class="back-link">
+                    <a href="/templates/register.html">Noch kein Account? Registrieren</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="/js/scripts.js"></script>
+</body>
+</html>
